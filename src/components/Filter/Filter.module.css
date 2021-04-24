@@ -1,0 +1,29 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterLabel {
+  margin-bottom: 10px;
+  color: #757575;
+}
+
+.filterInput {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+
+  border: 2px solid #778899;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.filterInput:focus,
+.filterInput:hover {
+  border: 2px solid #7b68ee;
+  outline: none;
+}
+
+h2 {
+  color: #789;
+}

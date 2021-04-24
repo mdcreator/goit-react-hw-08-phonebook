@@ -1,0 +1,12 @@
+.contactList {
+  color: #c0c0c0;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact:not(:last-child) {
+  margin-bottom: 10px;
+}
