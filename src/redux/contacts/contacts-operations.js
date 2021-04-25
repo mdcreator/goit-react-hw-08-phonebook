@@ -1,7 +1,11 @@
-import * as Api from '../../services/api';
+import * as Api from '../../services/phone-book-api';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAction } from '@reduxjs/toolkit';
 
-export const fetchContacts = createAsyncThunk(
+const changeFilter = createAction('contacts/changeFilter');
+const clearItems = createAction('contacts/clearItems');
+
+const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
   async (_, { rejectWithValue }) => {
     try {
@@ -13,7 +17,7 @@ export const fetchContacts = createAsyncThunk(
   },
 );
 
-export const postContact = createAsyncThunk(
+const postContact = createAsyncThunk(
   'contacts/postContact',
   async (data, { rejectWithValue }) => {
     try {
@@ -25,7 +29,7 @@ export const postContact = createAsyncThunk(
   },
 );
 
-export const deleteContact = createAsyncThunk(
+const deleteContact = createAsyncThunk(
   'contacts/addContact',
   async (id, { rejectWithValue }) => {
     try {
@@ -36,3 +40,12 @@ export const deleteContact = createAsyncThunk(
     }
   },
 );
+
+const operations = {
+  fetchContacts,
+  postContact,
+  deleteContact,
+  changeFilter,
+  clearItems,
+};
+export default operations;

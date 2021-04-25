@@ -1,0 +1,14 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12;
+  font-weight: 700;
+  color: #2a363b;
+}
+.link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.activeLink {
+  color: #e84a5f;
+}
